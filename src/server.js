@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 const mongoConnection = process.env.MONGO_CONNECTION;
 const port = process.env.PORT || 3000;
-
+mongoose.set("strictQuery", true);
 // Conectando com o banco de dados
 mongoose
   .connect(mongoConnection)
